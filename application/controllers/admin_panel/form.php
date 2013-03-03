@@ -3,7 +3,15 @@
 class Form extends CI_Controller {
 
     function index() {
-        $this->load->view('admin_panel/form_view');
+
+                $is_logged_in=$this->session->userdata('is_logged_in_admin');
+            if(!isset($is_logged_in)|| $is_logged_in!=TRUE)
+            {
+                echo 'You do not have permission to access this
+                    page pls..<a href="'.base_url().'index.php/admin_panel/authentication/login">Login</a>';
+            }
+
+        else  $this->load->view('admin_panel/form_view');
     }
 
     function input() {
@@ -20,8 +28,22 @@ class Form extends CI_Controller {
         $data['logic'] = $this->input->post('logic');
 
         if (($this->form_validation->run() == False) || empty($_FILES['photo']['name'])) {
+
             $data['msg'] = "fill all the field";
-            $this->load->view('admin_panel/form_view', $data);
+
+            $is_logged_in=$this->session->userdata('is_logged_in_admin');
+            if(!isset($is_logged_in)|| $is_logged_in!=TRUE)
+            {
+                echo 'You do not have permission to access this
+                    page pls..<a href="'.base_url().'index.php/admin_panel/authentication/login">Login</a>';
+            }
+
+
+
+            else $this->load->view('admin_panel/form_view', $data);
+
+
+
         } else {
             if (isset($_POST['submit'])) {
 

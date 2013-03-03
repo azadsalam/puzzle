@@ -23,7 +23,16 @@ class Manage_puzzle extends CI_Controller {
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
 	}	
 
-        function puzzle_management()
+    function puzzle_management()
+	{
+	
+	       $is_logged_in=$this->session->userdata('is_logged_in_admin');
+            if(!isset($is_logged_in)|| $is_logged_in!=TRUE)
+            {
+                echo 'You do not have permission to access this
+                    page pls..<a href="'.base_url().'index.php/admin_panel/authentication/login">Login</a>';
+            }
+	else
 	{
 		try{
 			$crud = new grocery_CRUD();
@@ -44,6 +53,11 @@ class Manage_puzzle extends CI_Controller {
 		}catch(Exception $e){
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
+		
+	}
+		
+		
+		
 	}
 
         
