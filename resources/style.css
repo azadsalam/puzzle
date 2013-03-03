@@ -1,0 +1,132 @@
+/* 
+    Document   : style
+    Created on : Feb 23, 2013, 8:48:33 PM
+    Author     : User
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+#hint
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+#photoframe
+{
+    padding-left: 1%;
+
+    float: left;
+    width : 67%;
+}
+#photoframe img
+{
+    width:100%;
+}
+#puzzle
+{
+    float: right;
+    padding-left: 2%;
+    width: 28%;
+    padding-right: 2%;
+}
+
+#success_box
+{
+    float: right;
+    padding-left: 2%;
+    width: 28%;
+    padding-right: 2%;
+}
+
+#guideline
+{
+    margin-top: 10px;
+    /*color: red;*/
+}
+
+#welldoneimage
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+}
+
+#ans_textbox
+{
+    width: 95%;
+}
+
+.passed
+{
+    /*  background-color: #7aba7b; */
+}
+
+
+
+.passed img{
+    width: 100%;
+}
+
+.grid-block
+{
+    width:100px;
+    height: 100px;
+    color: #990000;
+}
+#grid
+{
+    display: block;
+    width : 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #990000; */
+}
+
+#grid table{
+    /*
+    /border-width: 2px;
+ border-color: #6ac2cf;
+ border-bottom-style: groove;
+    */
+
+}
+
+.cell
+{
+    /*background-color: #6ac2cf;*/
+}
+
+#login
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:350px;
+    border-width: 2px;
+    border-color: #62aeeb;
+
+}
+#reg
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:350px;
+    border-width: 2px;
+    border-color: #62aeeb;
+}
+
+.myheader
+{
+    color: #666666;
+    text-align: center;
+}

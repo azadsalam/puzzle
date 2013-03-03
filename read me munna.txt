@@ -1,0 +1,24 @@
+The folder admin_panel under controllers shoud contain all the administrative controllers
+Task 1 :
+1) Incorporate admin Login, Add admin etc under the admin_panel folder, so that only adminstrators can access that 
+
+2) Puzzle upload code is done by Kamrul, you need to add the edit, delete options.
+
+Things to know :
+1)
+all the puzzle pictures should go under
+"resources/images/"
+now it has 4 images a,b,c and d.jpg. 
+
+2)
+The table that stores all the puzzles is 'puzzle'  [  `puzzle` (`serial`, `photo`, `hint`, `ans`, `logic`) ]
+the column "photo" stores the path of the puzzle picture .
+ For puzzle picture : a.jpg ,  it should contain " 'resources/images/a.jpg',
+
+Serial denotes the serial of the puzzle, starts with 1.
+so if there are 4 puzzle the serials will be 1,2,3,4 .
+
+For concistency the serials can never have gaps within ..
+
+3) you should provide the log options for admins.
+The Log table contains the log, the column name describes themselves
