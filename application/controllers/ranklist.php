@@ -11,6 +11,9 @@ class Ranklist extends CI_Controller {
         $ranklist = $this->progress_model->generate_ranklist();
         //print_r($ranklist);
 
+        $this->load->model('puzzle_model');
+        $count = $this->puzzle_model->count_levels();
+        
         $start = 1;
 
         foreach ($ranklist as $row) {
@@ -23,7 +26,10 @@ class Ranklist extends CI_Controller {
             $start++;
             $new_row['student_id'] = $row['student_id'];
             $new_row['uname'] = $row['uname'];
-            $new_row['current_level'] = $row['current_puzzle_serial'];
+            if($row['current_puzzle_serial'] > $count)
+                $new_row['current_level'] = "<b>Completed</b>";
+            else
+                $new_row['current_level'] = $row['current_puzzle_serial'];
             $new_row['uname'] = $row['uname'];
             // $new_row['last_correct_answer'] = $row['last_correct_answer'] ;
 

@@ -30,7 +30,8 @@ class Authentication extends CI_Controller {
                                      $this->load->library('session');
                                      $this->session->set_userdata($data);
 
-                                     $this->load->view('admin_panel/admin_page');
+                                     redirect('admin_panel/welcome');
+                                     //$this->load->view('admin_panel/admin_page');
                                    }
 
                                    else $this->load->view('admin_panel/login_form');

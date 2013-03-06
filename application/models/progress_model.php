@@ -30,7 +30,7 @@ class Progress_model extends CI_Model
         }
         public function mark_finished($uid)
         {
-            $query = "UPDATE progress SET finished = TRUE WHERE uid=?";
+            $query = "UPDATE progress SET finished = TRUE, current_puzzle_serial = current_puzzle_serial + 1 WHERE uid=?";
             $this->db->query($query,$uid);
         }
         public function get_current_level($uid)

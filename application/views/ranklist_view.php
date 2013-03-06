@@ -10,7 +10,8 @@
 $this->load->view('template/nav_helper', $data) ?>
 
         $('table').addClass('table table-striped');
-
+        //$('table').addClass('strech');
+        
 	$('table').dataTable();
     });
 </script>
@@ -23,7 +24,7 @@ $this->load->view('template/nav_helper', $data) ?>
     <?php
     // print_r($ranklist);
 
-
+    
     $this->table->set_heading(array('Rank', 'Student Id', 'Name', 'Current Level'));
     echo $this->table->generate($ranklist);
     ?>

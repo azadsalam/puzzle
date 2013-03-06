@@ -41,10 +41,15 @@ $this->load->view('template/nav_helper', $data) ?>
             <input type="text" placeholder="Your Name!!" name="uname" value="<?php echo set_value('uname'); ?>" >
             <label>Student ID</label>
             <input type="text" placeholder="Your Student ID!!" name="student_id" value="<?php echo set_value('student_id'); ?>" >
+            <label>Institution</label>
+            <input type="text" placeholder="Your Institution!!" name="institution" value="<?php echo set_value('institution'); ?>" >
+
+            <!--
             <label>Level</label>
             <input type="text" placeholder="Your Level!!" name="ulevel" value="<?php echo set_value('ulevel'); ?>" >
             <label>Term</label>
             <input type="text" placeholder="Your Term!!" name="uterm" value="<?php echo set_value('uterm'); ?>" >
+            -->
             <label>Mail Id</label>
             <input type="text" placeholder="Your mail address" name="mail" value="<?php echo set_value('mail'); ?>" >
             <label>Password</label>

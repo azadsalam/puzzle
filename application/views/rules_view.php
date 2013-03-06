@@ -18,12 +18,14 @@ $this->load->view('template/nav_helper', $data) ?>
     <h1 class="alert alert-info myheader">Rules</h1>
 
     <div class="hero-unit">
-        Welcome to Brain Hacker, one of our very interesting event of CSE Festival, 2013
+        Welcome to Hack the Brain, one of our very interesting event of CSE Festival, 2013
         BUET. There is no restriction of participation. But we request to use proper
         name while registering. The rules are very simple:
-
+<br/>
         1. See the picture, read the title and give the answer. Thats all. Simple and Stupid.
+        <br/>
         2. All the answers are one word(lower case alphabet).
+        <br/>
         3. Please do not give answer to your friend. You may discuss through  <a href="https://www.facebook.com/groups/csefest2013/">Festival Facebook Group</a>. You may give hint, but not answer.
     </div>
     <?php $this->load->view('template/footer') ?>

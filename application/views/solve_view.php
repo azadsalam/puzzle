@@ -129,11 +129,6 @@ $this-> load->view('template/nav_helper',$data)?>
 <?php $data['selected'] = "solve";
 $this-> load->view('template/navigation',$data)?>
 
-
-
-
-
-
           <!--MAIN CONTENT -->
     <h1 id ="hint" class="text-center alert alert-info"><?php echo $hint;?></h1>
     
@@ -181,10 +176,10 @@ $this-> load->view('template/navigation',$data)?>
 
 
     <div id ="success_box"  class="hide">
-        <div class="alert alert-success">
- <p>
-     <img  id="welldoneimage" src="<?php echo base_url()?>/resources/others/welldone.gif" >
-     Congratulations!! Thats the correct answer !!</p>
+        <div class="">
+            
+     <img  id="welldoneimage" src="<?php echo base_url()?>/resources/others/right_ans.jpg" >
+     <p class="text-center"><b>Well Done!! Thats the correct answer !!</b></p>
 </div>
 
         <div class="alert alert-info">
@@ -196,9 +191,5 @@ $this-> load->view('template/navigation',$data)?>
         </p>
     </div>
 
-
-
-
-        
 
 <?php $this-> load->view('template/footer')?>

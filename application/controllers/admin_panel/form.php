@@ -1,17 +1,18 @@
 <?php
 
 class Form extends CI_Controller {
+/*
+    function index()
+    {
 
-    function index() {
+        $is_logged_in = $this->session->userdata('is_logged_in_admin');
+        if (!isset($is_logged_in) || $is_logged_in != TRUE) {
+            echo 'You do not have permission to access this
+                    page pls..<a href="' . base_url() . 'index.php/admin_panel/authentication/login">Login</a>';
+        }
 
-                $is_logged_in=$this->session->userdata('is_logged_in_admin');
-            if(!isset($is_logged_in)|| $is_logged_in!=TRUE)
-            {
-                echo 'You do not have permission to access this
-                    page pls..<a href="'.base_url().'index.php/admin_panel/authentication/login">Login</a>';
-            }
-
-        else  $this->load->view('admin_panel/form_view');
+        else
+            $this->load->view('admin_panel/form_view');
     }
 
     function input() {
@@ -31,19 +32,16 @@ class Form extends CI_Controller {
 
             $data['msg'] = "fill all the field";
 
-            $is_logged_in=$this->session->userdata('is_logged_in_admin');
-            if(!isset($is_logged_in)|| $is_logged_in!=TRUE)
-            {
+            $is_logged_in = $this->session->userdata('is_logged_in_admin');
+            if (!isset($is_logged_in) || $is_logged_in != TRUE) {
                 echo 'You do not have permission to access this
-                    page pls..<a href="'.base_url().'index.php/admin_panel/authentication/login">Login</a>';
+                    page pls..<a href="' . base_url() . 'index.php/admin_panel/authentication/login">Login</a>';
             }
 
 
 
-            else $this->load->view('admin_panel/form_view', $data);
-
-
-
+            else
+                $this->load->view('admin_panel/form_view', $data);
         } else {
             if (isset($_POST['submit'])) {
 
@@ -79,5 +77,5 @@ class Form extends CI_Controller {
 
         print_r($data);
     }
-
+    */
 }

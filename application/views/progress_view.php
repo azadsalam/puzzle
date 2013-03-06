@@ -30,7 +30,7 @@
         width: 900px;
         margin-left: auto;
         margin-right: auto;
-}
+    }
 
     #grid
     {
@@ -52,54 +52,61 @@ $this->load->view('template/nav_helper', $data) ?>
 </head>
 <body>
 
-        <?php $this->load->view('template/navigation') ?>
-        <?php
+    <?php $this->load->view('template/navigation') ?>
+    <?php
+    if ($finished == true) {
+        $data['suc'] = 100;
+    } else {
         $data['suc'] = ($current - 1) * 100 / $total;
-        $this->load->view('template/progress_bar', $data)
-        ?>
+    }
+    $this->load->view('template/progress_bar', $data)
+    ?>
 
-
+    <?php
+    if ($finished == TRUE) {
+    ?>
+    <img class="center_image" src="<?php echo base_url()?>/resources/others/complete.jpg" />
+    <?php
+    }
+    ?>
     <div id="progress_body">
         <h1 class="alert alert-info" style="text-align: center;">LEVELS</h1>
         <div id="grid" >
 
-            <?php
-            for ($count = 1; $count <= $total; $count++) {
-                unset($new);
-
-                if ($count <= $current) {
-            ?>
+<?php
+    for ($count = 1; $count <= $total; $count++) {
+        unset($new);
 
 
 
-            <?php
-                    if ($count != $current) {
-            ?>
-                        <div class="cell passed" style ="background-image: url(<?php echo base_url() . "/" . $urls[$count] ?>) ">
-                            <img  src="<?php echo base_url() ?>/resources/others/tick.png" >                </div>
-            <?php
-                    } else {
-            ?>
-                        <div class="cell passed" >
-                            <a href="<?php echo site_url("solve") ?>"><img class="img-polaroid" src="<?php echo base_url() . "/" . $urls[$count] ?>"></a>
-                        </div>
-            <?php
-                    }
-            ?>
-
-
-
-
-            <?php
-                } else if ($count <= $total) {
-            ?>
-
-                    <div class="cell locked"><div class="inner_text"><h1><?php echo $count; ?></h1></div></div>
-
-            <?php
-                }
+        if ($count <= $current) {
+            if ($count != $current || $finished == true) {
+?>
+                <div class="cell passed" style ="background-image: url(<?php echo base_url() . "/" . $urls[$count] ?>) ">
+                    <img  src="<?php echo base_url() ?>/resources/others/tick.png" >                </div>
+<?php
+            } else {
+?>
+                <div class="cell passed" >
+                    <a href="<?php echo site_url("solve") ?>"><img class="img-polaroid" src="<?php echo base_url() . "/" . $urls[$count] ?>"></a>
+                </div>
+<?php
             }
-            ?>
+?>
+
+
+
+
+<?php
+        } else if ($count <= $total) {
+?>
+
+            <div class="cell locked"><div class="inner_text"><h1><?php echo $count; ?></h1></div></div>
+
+<?php
+        }
+    }
+?>
 
 
         </div>
@@ -115,4 +122,4 @@ $this->load->view('template/nav_helper', $data) ?>
     </script>
 
 
-    <?php $this->load->view('template/footer') ?>
+<?php $this->load->view('template/footer') ?>

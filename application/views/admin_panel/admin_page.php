@@ -1,8 +1,6 @@
-
-
         <?php
-
-            echo "this is adminpage...";
+        $this->load->view('admin_panel/navigation_admin');
+            echo "ADMIN PANEL";
         ?>
 <br/>
 

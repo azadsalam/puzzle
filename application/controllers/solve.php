@@ -51,7 +51,7 @@ class Solve extends CI_Controller {
 
             if($finished==TRUE)
             {
-                echo "FINISHED";
+                redirect('progress');
                 return;
             }
             else
@@ -238,6 +238,8 @@ class Solve extends CI_Controller {
 
 
             $original  = $ans_logic->ans;
+
+            //echo $original;
             $logic = $ans_logic->logic;
 
 

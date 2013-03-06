@@ -18,5 +18,6 @@
         <script src="<?php echo base_url() . 'resources' ?>/multigrid.js"></script>
 
 
-        <script src="<?php echo base_url() . 'resources' ?>/data_table/jquery.dataTables.min.js"></script>
+        <script src="<?php echo base_url() . 'resources' ?>/data_table/jquery.dataTables.js"></script>
         <link href="<?php echo base_url() . 'resources' ?>/data_table/demo_table.css" rel="stylesheet" media="screen">
+        <link href="<?php echo base_url() . 'resources' ?>/data_table/jquery.dataTables.css" rel="stylesheet" media="screen">

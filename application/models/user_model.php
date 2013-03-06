@@ -45,7 +45,7 @@ class User_model extends CI_Model
                 //echo "False";
     }
 
-        public function insertUser($uname, $student_id, $ulevel, $uterm, $mail, $pass)
+        public function insertUser($uname, $student_id, $ulevel, $uterm, $mail, $pass,$institution)
         {
             $pass = $this->process($pass);
             $data = array(
@@ -54,7 +54,8 @@ class User_model extends CI_Model
                'ulevel' => "$ulevel",
                 'uterm' => "$uterm",
                 'mail' => "$mail",
-                'password' => "$pass"
+                'password' => "$pass",
+                'institution' => $institution
             );
 
             

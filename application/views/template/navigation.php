@@ -15,7 +15,7 @@
                 //NOT LOGGED  IN
             ?>
                 <li  id="login_navbar"><a href="<?php echo site_url('auth'); ?>"> Log In </a></li>
-                <li  id="reg_navbar"><a href="<?php echo site_url('auth'); ?>"> Registration </a></li>
+                <li  id="reg_navbar"><a href="<?php echo site_url('registration'); ?>"> Registration </a></li>
             <?php
             } else {
                 //LOGGED IN
