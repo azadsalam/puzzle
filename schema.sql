@@ -70,4 +70,6 @@ ALTER TABLE `progress` CHANGE `current_puzzle_serial` `current_puzzle_serial` IN
 
 ALTER TABLE  `log` ADD  `lid` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST;
 
+ALTER TABLE  `progress` ADD PRIMARY KEY (  `uid` ) ;
+
 
