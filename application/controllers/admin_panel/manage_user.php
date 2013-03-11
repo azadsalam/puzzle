@@ -32,6 +32,7 @@ class Manage_user extends CI_Controller {
         try {
             $crud = new grocery_CRUD();
 
+            
             $crud->set_theme('datatables');
             $crud->set_table('user');
             $crud->set_subject('User');
@@ -40,7 +41,7 @@ class Manage_user extends CI_Controller {
 
             //$crud->set_field_upload('photo', 'resources/images');
 
-
+            $crud->unset_add();
             $output = $crud->render();
 
             $this->_example_output($output);

@@ -40,7 +40,7 @@ class Manage_progress extends CI_Controller {
 
             //$crud->set_field_upload('photo', 'resources/images');
 
-
+$crud->unset_add();
             $output = $crud->render();
 
             $this->_example_output($output);
