@@ -47,7 +47,7 @@ $this-> load->view('template/nav_helper',$data)?>
       {
             attempt++;
               $("#failure").removeClass("hide");
-              $("#failure").html("Only Characters and Numbers are allowed!! <br/>Attempts : "+ attempt);
+              $("#failure").html("Only Characters and Numbers are allowed!!<br/>All answers are one word (contains no spaces) and made of lower case letters.");
               $("#failure").addClass("alert alert-error");
       }
 
@@ -73,7 +73,7 @@ $this-> load->view('template/nav_helper',$data)?>
       {
               attempt++;
               $("#failure").removeClass("hide");
-              $("#failure").html("WRONG ANSWER !! KEEP TRYING!! <br/>Attempts : "+ attempt);
+              $("#failure").html("WRONG ANSWER !! KEEP TRYING!!");
               $("#failure").addClass("alert alert-error");
       }
 
