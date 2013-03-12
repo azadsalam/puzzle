@@ -33,7 +33,7 @@ class Log extends CI_Controller {
             $crud = new grocery_CRUD();
 
             $crud->set_theme('datatables');
-            $crud->set_table('log');
+            $crud->set_table($this->db->dbprefix('log'));
             $crud->set_subject('Log');
 
 
