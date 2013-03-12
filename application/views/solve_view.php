@@ -168,11 +168,14 @@ $this-> load->view('template/navigation',$data)?>
     <button  id="submit_button" class="btn btn-primary btn-large" >Submit !!</button>
 <div id="guideline" class="alert alert-info hide">
  Type your answer here and press enter or click submit button. <br/>All answers are "single word" and case-insensitive. Use only letters and numbers
-
 </div>
 
+        <div id="schedule">
+         <img src="<?php echo base_url().'resources/others/back.JPG' ?>"  class="img-polaroid">
+    </div>
 <?php //echo form_close();?>
 </div>
+
 
 
     <div id ="success_box"  class="hide">
