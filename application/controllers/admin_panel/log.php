@@ -41,7 +41,7 @@ class Log extends CI_Controller {
             $crud->set_relation('uid', 'user', 'mail');
             $crud->display_as('uid', 'User Mail');
 
-            $crud->unset_delete();
+         //   $crud->unset_delete();
             $crud->unset_add();
             $crud->unset_edit();
 
