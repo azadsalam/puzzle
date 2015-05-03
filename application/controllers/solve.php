@@ -277,7 +277,7 @@ class Solve extends CI_Controller {
             else
             {
                  $data['success']=false;
-                 $data['distance']=$distance;
+                 //$data['distance']=$distance;
                 //echo "HOYNAI";
             }
 
